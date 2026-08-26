@@ -1,1 +1,1178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
+    <title>外贸｜学习、研究与帮助</title>
+
+    <meta name="description" content="我们专注于外贸的学习、研究和帮助，关注国际贸易、海外市场、客户开发、供应链、跨境电商、外贸谈判与国际商务。">
+
+    <meta name="keywords" content="外贸,国际贸易,外贸学习,外贸业务,外贸客户,外贸开发,海外市场,跨境电商,外贸谈判,国际商务,外贸出口,外贸进口">
+
+    <meta name="theme-color" content="#063b5c">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                "Microsoft YaHei",
+                "PingFang SC",
+                "Noto Sans CJK SC",
+                Arial,
+                sans-serif;
+            background: #f5f8fa;
+            color: #24323d;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button,
+        a {
+            touch-action: manipulation;
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 72px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .section-title h2 {
+            color: #063b5c;
+            font-size: clamp(27px, 4vw, 34px);
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6d7b84;
+            font-size: 15px;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding:
+                max(22px, env(safe-area-inset-top))
+                16px
+                85px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #032438 0%,
+                    #063b5c 48%,
+                    #07577e 100%
+                );
+            color: #fff;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.035);
+            top: -250px;
+            right: -180px;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,.08);
+            bottom: -230px;
+            left: -120px;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            width: min(100%, 1000px);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .qq-group {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            min-height: 54px;
+            margin-bottom: 27px;
+            padding: 8px 22px 8px 10px;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 999px;
+            background: rgba(255,255,255,.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            font-size: clamp(17px, 3vw, 22px);
+            font-weight: 800;
+            letter-spacing: .5px;
+            white-space: nowrap;
+        }
+
+        .qq-icon {
+            flex: 0 0 auto;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            border-radius: 50%;
+            background: #fff;
+            color: #063b5c;
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        .hero-subtitle {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: clamp(25px, 5vw, 43px);
+            font-weight: 900;
+            line-height: 1.38;
+            letter-spacing: .5px;
+        }
+
+        .hero-subtitle span {
+            color: #63d5ff;
+        }
+
+        .hero-description {
+            max-width: 780px;
+            margin: 23px auto 0;
+            color: rgba(255,255,255,.8);
+            font-size: clamp(14px, 2vw, 16px);
+            line-height: 1.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 11px 25px;
+            border-radius: 9px;
+            background: #fff;
+            color: #063b5c;
+            font-weight: 700;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .hero-button.blue {
+            background: #13a8d8;
+            color: #fff;
+        }
+
+        .hero-button:active {
+            transform: scale(.97);
+        }
+
+        .intro {
+            position: relative;
+            z-index: 5;
+            margin-top: -45px;
+        }
+
+        .intro-card {
+            padding: clamp(25px, 5vw, 42px);
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 15px 45px rgba(3,36,56,.08);
+        }
+
+        .intro-card h2 {
+            color: #063b5c;
+            font-size: clamp(23px, 4vw, 28px);
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
+
+        .intro-card p {
+            color: #52636d;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            margin-top: 24px;
+            padding: 18px 20px;
+            border-left: 4px solid #13a8d8;
+            border-radius: 0 8px 8px 0;
+            background: #eefaff;
+            color: #40535e;
+            font-size: 14px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            min-width: 0;
+            padding: 28px;
+            background: #fff;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            background: #e8f6fb;
+            color: #063b5c;
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        .card h3 {
+            color: #173e54;
+            font-size: 19px;
+            line-height: 1.45;
+            margin-bottom: 9px;
+        }
+
+        .card p {
+            color: #6c7b84;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .risk-section {
+            background: #fff;
+        }
+
+        .risk-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .risk-item {
+            display: flex;
+            gap: 15px;
+            min-width: 0;
+            padding: 21px;
+            background: #f8fbfc;
+            border: 1px solid #e5edf1;
+            border-radius: 12px;
+        }
+
+        .risk-number {
+            flex: 0 0 42px;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #063b5c;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .risk-item h3 {
+            color: #173e54;
+            font-size: 17px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        .risk-item p {
+            color: #6c7b84;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .system {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .system-card,
+        .white-card {
+            min-width: 0;
+            padding: clamp(26px, 5vw, 36px);
+            border-radius: 16px;
+        }
+
+        .system-card {
+            background: #063b5c;
+            color: #fff;
+        }
+
+        .system-card h3,
+        .white-card h3 {
+            font-size: clamp(22px, 4vw, 25px);
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
+
+        .system-card h3 {
+            color: #fff;
+        }
+
+        .system-card p {
+            color: rgba(255,255,255,.78);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .white-card {
+            background: #fff;
+            border: 1px solid #e2ebf0;
+        }
+
+        .white-card h3 {
+            color: #063b5c;
+        }
+
+        .system-list {
+            list-style: none;
+        }
+
+        .system-list li {
+            position: relative;
+            padding: 8px 0 8px 25px;
+            font-size: 14px;
+        }
+
+        .system-card .system-list li {
+            color: rgba(255,255,255,.9);
+        }
+
+        .white-card .system-list li {
+            color: #52636d;
+        }
+
+        .system-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: 900;
+        }
+
+        .system-card .system-list li::before {
+            color: #63d5ff;
+        }
+
+        .white-card .system-list li::before {
+            color: #13a8d8;
+        }
+
+        .principles {
+            background: #eef5f8;
+        }
+
+        .learning-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .learning-item {
+            padding: 23px 15px;
+            background: #fff;
+            border: 1px solid #e2ebf0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .learning-item strong {
+            display: block;
+            color: #063b5c;
+            font-size: 17px;
+            line-height: 1.5;
+            margin-bottom: 7px;
+        }
+
+        .learning-item span {
+            color: #74838c;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .principle {
+            padding: 28px;
+            background: #fff;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .principle h3 {
+            color: #063b5c;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .principle p {
+            color: #6c7b84;
+            font-size: 14px;
+        }
+
+        .community {
+            background:
+                linear-gradient(
+                    135deg,
+                    #07577e,
+                    #032438
+                );
+            color: #fff;
+            text-align: center;
+        }
+
+        .community h2 {
+            font-size: clamp(27px, 5vw, 35px);
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .community p {
+            max-width: 720px;
+            margin: auto;
+            color: rgba(255,255,255,.78);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .community-qq {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 56px;
+            max-width: calc(100% - 20px);
+            margin-top: 28px;
+            padding: 12px 32px;
+            border-radius: 10px;
+            background: #13a8d8;
+            color: #fff;
+            font-size: clamp(18px, 4vw, 21px);
+            font-weight: 900;
+            box-shadow: 0 10px 30px rgba(0,0,0,.25);
+        }
+
+        .notice {
+            padding: 42px 0;
+            background: #fff;
+        }
+
+        .notice-box {
+            padding: 23px;
+            background: #f8fbfc;
+            border-radius: 10px;
+            color: #6c7b84;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .notice-box strong {
+            color: #173e54;
+        }
+
+        footer {
+            padding:
+                28px 20px
+                max(28px, env(safe-area-inset-bottom));
+            background: #032438;
+            color: rgba(255,255,255,.6);
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .learning-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 720px) {
+            .section {
+                padding: 58px 0;
+            }
+
+            .system {
+                grid-template-columns: 1fr;
+            }
+
+            .risk-list {
+                grid-template-columns: 1fr;
+            }
+
+            .principle-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .container {
+                width: calc(100% - 24px);
+            }
+
+            .hero {
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 68px;
+            }
+
+            .qq-group {
+                min-height: 48px;
+                margin-bottom: 22px;
+                padding: 6px 16px 6px 7px;
+                font-size: 17px;
+            }
+
+            .qq-icon {
+                width: 34px;
+                height: 34px;
+                margin-right: 8px;
+                font-size: 16px;
+            }
+
+            .hero-subtitle {
+                font-size: clamp(25px, 8vw, 32px);
+                line-height: 1.42;
+            }
+
+            .hero-description {
+                margin-top: 18px;
+                font-size: 14px;
+                text-align: left;
+            }
+
+            .hero-buttons {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin-top: 25px;
+            }
+
+            .hero-button {
+                width: 100%;
+                min-height: 50px;
+            }
+
+            .intro {
+                margin-top: -30px;
+            }
+
+            .intro-card {
+                border-radius: 13px;
+                padding: 24px 20px;
+            }
+
+            .intro-card p {
+                font-size: 14px;
+                text-align: left;
+            }
+
+            .highlight {
+                padding: 16px;
+                font-size: 13px;
+            }
+
+            .grid,
+            .learning-list {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 23px;
+            }
+
+            .risk-item {
+                padding: 18px;
+            }
+
+            .risk-number {
+                flex-basis: 38px;
+                width: 38px;
+                height: 38px;
+            }
+
+            .system-card,
+            .white-card {
+                padding: 24px 20px;
+            }
+
+            .learning-item {
+                padding: 20px 15px;
+            }
+
+            .principle {
+                padding: 24px 20px;
+            }
+
+            .community {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .community-qq {
+                width: 100%;
+                max-width: 100%;
+                min-height: 54px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .notice-box {
+                padding: 18px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .qq-group {
+                font-size: 15px;
+                padding-right: 13px;
+            }
+
+            .qq-icon {
+                width: 31px;
+                height: 31px;
+            }
+
+            .hero-subtitle {
+                font-size: 24px;
+            }
+
+            .hero-description {
+                font-size: 13px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .hero-button,
+            .card {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="hero-inner">
+
+        <div class="qq-group">
+            <div class="qq-icon">Q</div>
+            QQ群：<span data-qq-group></span>
+        </div>
+
+        <h1 class="hero-subtitle">
+            我们专注于外贸的
+            <span>学习、研究和帮助</span>
+        </h1>
+
+        <p class="hero-description">
+            关注国际贸易、海外市场、客户开发、产品出口、供应链、
+            外贸谈判与跨境业务，通过知识学习、案例研究和经验交流，
+            帮助外贸从业者更好地理解国际市场，提升外贸业务能力。
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#about" class="hero-button">
+                了解外贸
+            </a>
+
+            <a href="#community" class="hero-button blue">
+                加入学习交流
+            </a>
+        </div>
+
+    </div>
+
+</header>
+
+<section class="section intro" id="about">
+
+    <div class="container">
+
+        <div class="intro-card">
+
+            <h2>什么是外贸？</h2>
+
+            <p>
+                外贸，即国际贸易，是不同国家或地区之间进行商品、
+                服务以及相关商业活动交换的重要形式。
+                对企业而言，外贸不仅是产品出口，更涉及市场研究、
+                客户开发、报价谈判、订单执行、物流运输、收付款以及售后服务。
+            </p>
+
+            <p>
+                随着全球市场和互联网的发展，企业寻找海外客户的方式
+                正在不断变化。传统展会、搜索引擎、社交媒体、
+                B2B平台、跨境电商以及本地合作伙伴，都可能成为
+                企业拓展海外市场的重要渠道。
+            </p>
+
+            <p>
+                做好外贸，需要了解产品，也需要了解市场、客户、
+                贸易规则和商业文化。长期稳定的客户关系，
+                往往建立在专业、诚信、沟通和持续服务的基础之上。
+            </p>
+
+            <div class="highlight">
+                <strong>我们的理念：</strong>
+                外贸不是简单地“把产品卖到国外”，
+                而是通过专业能力、市场理解、有效沟通和长期服务，
+                建立稳定、健康、可持续的国际商业关系。
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>我们关注的外贸领域</h2>
+            <p>从外贸业务实际出发，研究国际市场中的不同环节</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-icon">01</div>
+                <h3>海外市场</h3>
+                <p>
+                    研究不同国家和地区的市场特点、
+                    消费需求、行业趋势与商业环境。
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">02</div>
+                <h3>客户开发</h3>
+                <p>
+                    学习通过搜索引擎、社交媒体、B2B平台、
+                    展会等方式寻找潜在海外客户。
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">03</div>
+                <h3>外贸谈判</h3>
+                <p>
+                    关注询盘、报价、付款方式、交货条件、
+                    产品要求以及商务谈判技巧。
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">04</div>
+                <h3>供应链管理</h3>
+                <p>
+                    关注采购、生产、质量控制、库存、
+                    包装以及国际物流等业务环节。
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">05</div>
+                <h3>跨境电商</h3>
+                <p>
+                    研究跨境电商平台、独立站、
+                    海外营销以及国际消费者需求。
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">06</div>
+                <h3>国际商务</h3>
+                <p>
+                    关注国际商务礼仪、商业文化、
+                    合同、付款、物流及贸易风险。
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section risk-section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>外贸业务中的常见问题</h2>
+            <p>发现问题、理解问题，是提升外贸能力的重要一步</p>
+        </div>
+
+        <div class="risk-list">
+
+            <div class="risk-item">
+                <div class="risk-number">01</div>
+                <div>
+                    <h3>不知道去哪里找客户</h3>
+                    <p>
+                        缺少明确的目标市场和客户画像，
+                        不清楚不同国家适合采用什么开发方式。
+                    </p>
+                </div>
+            </div>
+
+            <div class="risk-item">
+                <div class="risk-number">02</div>
+                <div>
+                    <h3>客户开发效果不理想</h3>
+                    <p>
+                        开发信、社交媒体、平台询盘等渠道投入了时间，
+                        但有效客户数量有限。
+                    </p>
+                </div>
+            </div>
+
+            <div class="risk-item">
+                <div class="risk-number">03</div>
+                <div>
+                    <h3>报价与谈判困难</h3>
+                    <p>
+                        面对不同客户的价格要求、
+                        付款条件和交货要求时缺乏经验。
+                    </p>
+                </div>
+            </div>
+
+            <div class="risk-item">
+                <div class="risk-number">04</div>
+                <div>
+                    <h3>跨文化沟通</h3>
+                    <p>
+                        不同国家在沟通习惯、商业文化、
+                        决策方式和商务礼仪方面存在差异。
+                    </p>
+                </div>
+            </div>
+
+            <div class="risk-item">
+                <div class="risk-number">05</div>
+                <div>
+                    <h3>订单执行问题</h3>
+                    <p>
+                        生产、质量、包装、物流、
+                        单证以及交付过程都需要有效协调。
+                    </p>
+                </div>
+            </div>
+
+            <div class="risk-item">
+                <div class="risk-number">06</div>
+                <div>
+                    <h3>付款与贸易风险</h3>
+                    <p>
+                        国际交易涉及不同付款方式、信用风险、
+                        汇率变化以及合同履行等问题。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>做好外贸，需要建立完整的业务体系</h2>
+            <p>从寻找客户到长期合作，每个环节都值得认真学习</p>
+        </div>
+
+        <div class="system">
+
+            <div class="system-card">
+
+                <h3>开发客户只是开始</h3>
+
+                <p>
+                    外贸业务并不是找到客户之后就结束，
+                    真正长期稳定的合作，需要从产品、沟通、
+                    报价、订单执行到售后服务形成完整的业务流程。
+                </p>
+
+                <ul class="system-list">
+                    <li>明确目标市场和客户类型</li>
+                    <li>建立适合自己的客户开发渠道</li>
+                    <li>准备专业的产品和公司资料</li>
+                    <li>建立规范的询盘和报价流程</li>
+                    <li>做好订单执行和质量控制</li>
+                    <li>维护长期客户关系</li>
+                </ul>
+
+            </div>
+
+            <div class="white-card">
+
+                <h3>长期客户关系</h3>
+
+                <ul class="system-list">
+                    <li>及时回应客户的合理需求</li>
+                    <li>保持清晰、准确的商务沟通</li>
+                    <li>如实介绍产品和交付能力</li>
+                    <li>重视合同与交易条件</li>
+                    <li>持续关注客户市场变化</li>
+                    <li>通过服务建立长期信任</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section principles">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>我们学习什么？</h2>
+            <p>覆盖外贸业务从入门到实际运营的多个方面</p>
+        </div>
+
+        <div class="learning-list">
+
+            <div class="learning-item">
+                <strong>外贸基础</strong>
+                <span>认识国际贸易基本知识</span>
+            </div>
+
+            <div class="learning-item">
+                <strong>市场分析</strong>
+                <span>研究海外市场与行业需求</span>
+            </div>
+
+            <div class="learning-item">
+                <strong>客户开发</strong>
+                <span>学习寻找和筛选潜在客户</span>
+            </div>
+
+            <div class="learning-item">
+                <strong>商务英语</strong>
+                <span>提升国际商务沟通能力</span>
+            </div>
+
+            <div class="learning-item">
+                <strong>报价谈判</strong>
+                <span>理解价格与交易条件</span>
+            </div>
+
+            <div class="learning-item">
+                <strong>订单管理</strong>
+                <span>做好订单执行与交付</span>
+            </div>
+
+            <div class="learning-item">
+                <strong>国际物流</strong>
+                <span>了解国际运输与交付流程</span>
+            </div>
+
+            <div class="learning-item">
+                <strong>客户维护</strong>
+                <span>建立长期稳定的客户关系</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>我们坚持的原则</h2>
+            <p>用专业、诚信和长期主义做好国际贸易</p>
+        </div>
+
+        <div class="principle-grid">
+
+            <div class="principle">
+                <h3>专业</h3>
+                <p>
+                    持续学习产品、市场、贸易规则和国际商务知识，
+                    提升专业能力。
+                </p>
+            </div>
+
+            <div class="principle">
+                <h3>诚信</h3>
+                <p>
+                    尊重客户和合作伙伴，真实、准确地介绍产品、
+                    服务以及交易条件。
+                </p>
+            </div>
+
+            <div class="principle">
+                <h3>长期</h3>
+                <p>
+                    不只关注一次交易，更重视长期客户关系、
+                    服务能力和持续合作。
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section community" id="community">
+
+    <div class="container">
+
+        <h2>加入外贸学习交流</h2>
+
+        <p>
+            如果你正在从事外贸、国际贸易、跨境电商、
+            海外市场、采购、供应链或相关工作，
+            欢迎加入我们的交流社区。
+            一起学习外贸知识，交流市场经验，
+            分享客户开发、商务沟通和国际贸易中的实际问题。
+        </p>
+
+        <div class="community-qq">
+            QQ群：<span data-qq-group></span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="notice">
+
+    <div class="container">
+
+        <div class="notice-box">
+
+            <strong>说明：</strong>
+
+            本页面主要用于外贸、国际贸易、跨境业务及相关知识的学习、
+            研究和交流。页面中的内容用于一般性知识分享和经验交流，
+            不构成针对具体国家、企业、交易或合同的法律、税务、
+            金融、贸易合规或专业意见。
+
+            <br><br>
+
+            国际贸易涉及不同国家和地区的法律法规、进出口政策、
+            税务、制裁、产品认证、知识产权、数据保护以及贸易规则。
+            开展具体业务时，应根据实际交易情况核实适用规则，
+            必要时咨询当地专业人士或相关机构。
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div>
+        © 2026 外贸学习与研究平台
+    </div>
+
+    <div>
+        专注于外贸的学习、研究和帮助
+    </div>
+
+</footer>
+
+<script>
+    const QQ_GROUP = "1108790754";
+
+    document.querySelectorAll("[data-qq-group]").forEach(function(element) {
+        element.textContent = QQ_GROUP;
+    });
+</script>
+
+</body>
+</html>
